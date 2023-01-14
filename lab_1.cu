@@ -15,14 +15,14 @@ __global__ void vector_addition (double *a, double *b, double *result)
 int main()
 {
    
-      double *a = new double[N];
-	double *b = new double[N];
-	double *res = new double[N];
+    double *a = new double[N];
+    double *b = new double[N];
+    double *res = new double[N];
 
-      double *d_a, *d_b, *d_res;
-      cudaMalloc(&d_a, N*sizeof(double));
-      cudaMalloc(&d_b, N*sizeof(double));
-      cudaMalloc(&d_res, N*sizeof(double));
+    double *d_a, *d_b, *d_res;
+    cudaMalloc(&d_a, N*sizeof(double));
+    cudaMalloc(&d_b, N*sizeof(double));
+    cudaMalloc(&d_res, N*sizeof(double));
 
     for(int i=0; i<N; i++)
     {
